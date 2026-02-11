@@ -55,6 +55,7 @@ To view the complete and detailed SQL code for this project, visit:
 
 
 
+
 ### ✅**Summary of Skills**
   - **Database Design:** 1NF, 2NF, 3NF, Candidate Key Theory
   - **SQL Environments:** PostgreSQL & Microsoft SQL Server.
