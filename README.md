@@ -2,7 +2,7 @@
 
 ## **Project Overview**
 Ths project shows how I audites a "flat" database for an online store and refactored it into a professional, relational schema. I handled the full mormalization process and verified the results in both **PostgreSQL** and **MS SQL Server**.
----
+
 
 ## 🔍 **Step 1: 1NF Investigation (The Audit)**
 I started with 3455 rows of a raw transaction data.
@@ -47,8 +47,8 @@ SELECT  customerid,
 INTO TMP
 FROM Transactions;
 ````
----
-### 🧷 Full Script
+
+## 🧷 Full Script
 To view the complete and detailed SQL code for this project, visit:
 [postgresql_redesign_3nf_schema.sql](./postgresql_redesign_3nf_schema.sql) and
 [mssql_redesign_3nf_scheme.sql](./mssql_redesign_3nf_schema.sql)
@@ -56,7 +56,7 @@ To view the complete and detailed SQL code for this project, visit:
 
 
 
-### ✅**Summary of Skills**
+## ✅**Summary of Skills**
   - **Database Design:** 1NF, 2NF, 3NF, Candidate Key Theory
   - **SQL Environments:** PostgreSQL & Microsoft SQL Server.
 
