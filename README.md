@@ -17,4 +17,40 @@ I focused on removing partial dependencies by identifying the correct **Candidat
   - **Final Cleanup:** I used ALTER TABLE to **DROP** the reduntant columns from Transactions table and then **DROPPED** the TMP table to keep the database clean.
   - **Confirmation:** I confirmed the tables were in **Second Normal Form**
 
+## ⚡ **Step 3: 3NF - Checking All Tables for Transitive Dependencies** to reach **Third Normal Form**, I audited all newly created tables
+  - **Auditing Customers:** I verified that all fields in the CUSTOMERS table depended only on the customerid Candidate Key.
+  - **Auditing Transactions:** I discovered that retail_price and description depended on the Item name, not the transaction itself --a transitive dependency.
+  -  **The Final Fix:** I isolated 126 unique products into a master **ITEMS** table and dropped the reduntant columns from Transactions.
+  -  **Confirmation:** I confirmed the tables were in **Third Normal Form**.
+
+## 💻 **Code Comparison Examples (The Bridge Strategy)**
+
+### **PostgreSQL**
+````
+CRETAE TABLE TMP AS
+SELECT customerid,
+      firstname,
+      surname,
+      shipping_state,
+      loyalty_discount
+FROM Transactions;
+````
+
+### **MS SQL Server**
+
+ ````
+SELECT  customerid,
+        firstname,
+        surname,
+        shipping_state,
+        loyalty_discount
+INTO TMP
+FROM Transactions;
+````
+
+### ✅**Summary of Skills**
+  - **Database Design:** 1NF, 2NF, 3NF, Candidate Key Theory.
+  - **SQL Environments:** PostgreSQL & Microsoft SQL Server.
+
+      
 
